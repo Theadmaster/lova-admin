@@ -4,30 +4,31 @@ export function getList(params) {
   return request({
     url: '/api/v1/getAllSentences',
     method: 'post',
-    params
+    params,
+    data: params
   })
 }
 
-export function addSentence(params) {
+export function addSentence(data) {
     return request({
       url: '/api/v1/addSentence',
       method: 'post',
-      params
+      data
     })
 }
 
-export function modifySentence(params) {
+export function modifySentence(data) {
     return request({
       url: '/api/v1/modifySentence',
       method: 'post',
-      params
+      data
     })
 }
 
-export function deleteSentence(params) {
+export function deleteSentence(data) {
     return request({
       url: '/api/v1/deleteSentence',
       method: 'post',
-      params
+      data
     })
 }
