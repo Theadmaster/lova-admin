@@ -2,7 +2,7 @@ import request from '@/utils/request'
 
 export function getList(params) {
   return request({
-    url: '/api/v1/getAllSentences',
+    url: '/getAllSentences',
     method: 'post',
     params,
     data: params
@@ -11,7 +11,7 @@ export function getList(params) {
 
 export function addSentence(data) {
     return request({
-      url: '/api/v1/addSentence',
+      url: '/addSentence',
       method: 'post',
       data
     })
@@ -19,7 +19,7 @@ export function addSentence(data) {
 
 export function modifySentence(data) {
     return request({
-      url: '/api/v1/modifySentence',
+      url: '/modifySentence',
       method: 'post',
       data
     })
@@ -27,7 +27,7 @@ export function modifySentence(data) {
 
 export function deleteSentence(data) {
     return request({
-      url: '/api/v1/deleteSentence',
+      url: '/deleteSentence',
       method: 'post',
       data
     })
