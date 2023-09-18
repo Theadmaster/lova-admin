@@ -111,7 +111,7 @@
         :page-sizes="[10, 20, 30, 40]"
         :page-size="pageInfo.pageSize"
         layout="total, sizes, prev, pager, next, jumper"
-        :total="400">
+        :total="pageInfo.count">
       </el-pagination>
     </div>
   </div>
@@ -154,7 +154,8 @@ export default {
       operateType: '',
       pageInfo: {
         pageNum: 1,
-        pageSize: 10
+        pageSize: 10,
+        count:0
       }
     };
   },
@@ -167,6 +168,7 @@ export default {
       getList(this.pageInfo).then((response) => {
         console.log(response);
         this.list = response.data.data;
+        this.pageInfo = response.data.pageInfo
         this.listLoading = false;
       });
     },
